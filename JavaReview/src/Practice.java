@@ -1,26 +1,20 @@
-////////////////////////////////////////
-//	Java Review
-//	8-21-24
-//	CompSci254
-//
+public class Practice {
 
-import java.util.Scanner;
+    public static void main(String[] args) {
+    	for(int p = 0; p<20; p++) {
+        int n = p; // Set your value for n here
+        int sum = 0;
 
-public class Practice 
-{
-	public static void main(String[] args)
-	{
-		int[] data = new int[5];
-		Scanner scan = new Scanner(System.in);
-		for(int i = 0; i < data.length; i++)
-		{
-			System.out.print("Please enter an integer: ");
-			data[i] = scan.nextInt();		
-		}
-		
-		for(int i = 0; i < data.length; i++)
-		{
-			System.out.print(data[i]);
-		}
-	}
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j < i * i; j++) {
+                if (j % i == 0) {
+                    for (int k = 0; k < j; k++) {
+                        sum++;
+                    }
+                }
+            }
+        }
+
+        System.out.println("The sum for n = " + n + " is: " + sum);
+    }}
 }
